@@ -1,6 +1,9 @@
 Proxy tools
 ===========
 
+Dependencies: curb
+
+
 This is a collection of scripts to work with proxies in Ruby. All are pre-alpha, that is, written for my personal use. 
 
 I'm not sure where this will go from here.
