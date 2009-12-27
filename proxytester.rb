@@ -3,6 +3,12 @@ require 'curb'
 
 proxies = []
 
+$stdin.each do |f|
+  f.each_line do |proxy|
+    proxies << proxy.strip
+  end
+end
+
 #returns the IP and all of the request vars
 TESTING_SIGNATURE = 'ProxyTester'
 TESTING_URL = 'http://leonid.shevtsov.me/stuff/request_vars.php'
@@ -50,5 +56,3 @@ proxies.each do |proxy|
     puts "[error #{e.inspect}]"
   end
 end
-
-puts 
